@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:nestedScrollingEnabled="false">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_imgae"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/camera2"
+            android:scaleType="fitCenter" 
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Camera \n New Products \n Form Leica " />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imgae_ad"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/card_imgae"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/browse1"/>
+    <TextView
+        android:id="@+id/txt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="| Latest Arrivals"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/imgae_ad"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="View All"
+        android:background="@android:color/holo_orange_dark"
+        android:textSize="14dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/txt_text"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_latest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_text"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/imgae_ad1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_latest"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/browse3"/>
+    <TextView
+        android:id="@+id/txt_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="| Choose By Country"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/imgae_ad1"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_text1"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imgae_ad2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_country"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/browse2"/>
+    <TextView
+        android:id="@+id/txt_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="| Popular Products"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/imgae_ad2"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_text2"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
